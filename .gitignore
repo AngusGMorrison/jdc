@@ -30,3 +30,6 @@
 /config/credentials/development.key
 /config/credentials/test.key
 /.env
+
+# Ignore node_modules.
+/node_modules
