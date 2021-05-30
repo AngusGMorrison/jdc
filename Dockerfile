@@ -57,4 +57,4 @@ RUN npm install
 # Copy remaining application code.
 COPY . ./
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
