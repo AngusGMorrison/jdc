@@ -28,6 +28,7 @@ gem "jbuilder", "~> 2.7"
 gem "bootsnap", ">= 1.4.4", require: false
 # Background processing backend.
 gem "sidekiq", "~> 6.0"
+gem "react-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
