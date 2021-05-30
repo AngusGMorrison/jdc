@@ -27,14 +27,14 @@ RUN apk add --update --no-cache \
   netcat-openbsd \
   nodejs \
   # SSL toolkit/cryptographic utility.
-  npm \
   openssl \
   # System for managing library compile and link flags.
   pkgconf \
   postgresql-dev \
   # Timezone data.
   tzdata \
-  vim
+  vim \
+  yarn
 
 # Guarantee parity between the containerized environment and Gemfile.lock.
 ARG BUNDLER_VERSION=2.2.15
@@ -50,8 +50,8 @@ RUN bundle config build.nokogiri --use-system-libraries
 # Check gems aren't already installed before installing.
 RUN bundle check || bundle install
 
-COPY package.json package-lock.json ./
-RUN npm install
+COPY package.json yarn.lock ./
+RUN yarn install --check-files
 
 # Copy remaining application code.
 COPY . ./
