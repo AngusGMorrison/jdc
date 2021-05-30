@@ -34,5 +34,8 @@ module JuniorDevClub
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Changing files matching these dirs/exts will cause the server renderer to reload:
+    config.react.server_renderer_extensions = ["jsx", "js", "tsx", "ts"]
   end
 end
