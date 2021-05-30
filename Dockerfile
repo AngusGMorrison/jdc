@@ -32,7 +32,6 @@ RUN apk add --update --no-cache \
   # System for managing library compile and link flags.
   pkgconf \
   postgresql-dev \
-  python \
   # Timezone data.
   tzdata \
   vim
