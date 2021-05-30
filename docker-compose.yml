@@ -32,6 +32,7 @@ services:
       # After the image entrypoint creates the default postgres user and db, it
       # will run any scripts found in docker-entrypoint-initdb.d.
       - ./db/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    env_file: .env
 
   redis:
     image: redis:6.2.3
