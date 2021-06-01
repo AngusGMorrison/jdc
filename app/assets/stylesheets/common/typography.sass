@@ -1,0 +1,26 @@
+@font-face
+  font-family: "FA-Sysfont-C"
+  src: local("FA-Sysfont-C"), font-url("FA-Sysfont-C.woff") format("woff2"), font-url("FA-Sysfont-C.woff2") format("woff")
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap')
+
+$heading-font-family: "FA-Sysfont-C", "Courier New", monospace
+$body-font-family: "Merriweather", serif
+
+h1
+  font-family: $heading-font-family
+  font-size: 36px
+  margin-bottom: 20px
+
+h1::after
+  content: "▮"
+
+h2
+  font-family: $heading-font-family
+  font-size: 24px
+  margin-bottom: 20px
+
+p
+  font-family: $body-font-family
+  font-size: 12px
+  margin-bottom: 12px
