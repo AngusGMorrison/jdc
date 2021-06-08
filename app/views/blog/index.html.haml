@@ -5,9 +5,5 @@
   %p Consciousness, now streaming.
 
   #blog-container
-    .double-border-outer
-      .double-border-inner.post-content-container
-        %h2 The Glass Is Not a Stupid Question
-        %p.timestamp 12:24, 2 Jun 2021
-        %img.hero-image{src: image_url("gifs/digger.gif")}
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum vitae felis consequat vehicula. Sed pretium venenatis sapien. Sed euismod ipsum a tellus hendrerit suscipit. Nulla lacinia mauris eget dictum interdum. Sed eu aliquet lacus, id faucibus sem. Etiam mollis feugiat aliquam. Nam vehicula at ante ut placerat. Mauris magna dolor, elementum at velit sed, hendrerit pulvinar nulla. Nulla mi mi, commodo vel fringilla id, rutrum mattis est. Aenean id eros id tortor molestie scelerisque.
+    - blog_posts.each do |post|
+      = render "blog_post", blog_post: post

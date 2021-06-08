@@ -28,9 +28,15 @@ gem "jbuilder", "~> 2.7"
 gem "bootsnap", ">= 1.4.4", require: false
 # Background processing backend.
 gem "sidekiq", "~> 6.0"
-gem "react-rails"
+gem "react-rails", "~> 2.0"
 # Templating engine.
 gem "haml-rails", "~> 2.0"
+# http client
+gem "http", "~> 5.0"
+# Markdown parser
+gem "redcarpet", "~> 3.0"
+# Use methods to expose data to views, not instance variables.
+gem "decent_exposure", "~> 3.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
