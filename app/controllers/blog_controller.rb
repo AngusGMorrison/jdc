@@ -1,5 +1,5 @@
 class BlogController < ApplicationController
-  expose :blog_posts, fetch: -> { Services::Blog.get(page: page) }
+  expose :blog_posts, fetch: -> { Services::Blog::Adapter.get(page: page) }
 
   private
 

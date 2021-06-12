@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   app:
     # Build from local files and Dockerfile rather than pulling an image.
@@ -11,6 +9,8 @@ services:
       - redis
     ports:
       - 3000:3000
+    stdin_open: true
+    tty: true
     volumes:
       # Bind mount: mounts application code on the host to the /app directory on
       # the container. Changes to the host files are immediately reflected in
