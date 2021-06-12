@@ -59,6 +59,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
   gem "spring"
+  # Annotate models with schema
+  gem "annotate", "~> 3.1"
 end
 
 group :test do
