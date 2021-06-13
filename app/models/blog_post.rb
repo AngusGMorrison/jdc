@@ -4,7 +4,7 @@
 #
 #  id              :uuid             not null, primary key
 #  hero_image_path :string
-#  html_body       :string
+#  markdown        :string
 #  title           :string
 #  created_at      :datetime
 #  updated_at      :datetime
@@ -15,4 +15,8 @@
 #
 class BlogPost < ApplicationRecord
   self.implicit_order_column = "created_at"
+
+  def html
+    @html ||= Services::Blog::PostParser.instance.to_html(markdown)
+  end
 end

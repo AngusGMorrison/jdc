@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_06_12_134827) do
   create_table "blog_posts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.string "hero_image_path"
-    t.string "html_body"
+    t.string "markdown"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["created_at"], name: "index_blog_posts_on_created_at"

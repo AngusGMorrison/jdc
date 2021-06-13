@@ -37,6 +37,8 @@ gem "http", "~> 5.0"
 gem "redcarpet", "~> 3.0"
 # Use methods to expose data to views, not instance variables.
 gem "decent_exposure", "~> 3.0"
+# Pagination
+gem "kaminari", "~> 1.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger

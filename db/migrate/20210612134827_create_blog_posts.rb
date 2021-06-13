@@ -5,7 +5,7 @@ class CreateBlogPosts < ActiveRecord::Migration[6.1]
     create_table :blog_posts, id: :uuid do |t|
       t.string :title
       t.string :hero_image_path
-      t.string :html_body
+      t.string :markdown
 
       t.datetime :created_at, index: true
       t.datetime :updated_at
