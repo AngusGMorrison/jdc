@@ -2,12 +2,13 @@
 #
 # Table name: blog_posts
 #
-#  id              :uuid             not null, primary key
-#  hero_image_path :string
-#  markdown        :string
-#  title           :string
-#  created_at      :datetime
-#  updated_at      :datetime
+#  id                  :uuid             not null, primary key
+#  hero_image_alt_text :string
+#  hero_image_path     :string
+#  markdown            :string
+#  title               :string
+#  created_at          :datetime
+#  updated_at          :datetime
 #
 # Indexes
 #

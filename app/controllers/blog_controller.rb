@@ -4,7 +4,7 @@ class BlogController < ApplicationController
   private
 
   def paginated_blog_posts
-    BlogPost.page(page).per(per)
+    BlogPost.page(page).per(per_page)
   end
 
   def page

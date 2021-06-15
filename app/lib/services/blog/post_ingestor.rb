@@ -13,9 +13,9 @@ module Services
     # Body
     class PostIngestor
       class FormatError < RuntimeError
-        def initialize
+        def initialize(path)
           super(<<~MSG)
-            Unable to match BlogPost fields. Markdown files must use the following format:"
+            Unable to match BlogPost fields for #{path}. Markdown files must use the following format:"
             # Title
 
             ![Alt text](path/to/hero/image)
@@ -25,15 +25,24 @@ module Services
         end
       end
 
-      PATTERN = /\A# (?<title>.+)\n\n^!\[(?<alt_text>.*)\]\((?<image_path>.+)\)\n\n(?<body>.+)/
+      BLOG_POST_FORMAT = /\A# (?<title>.+)\n\n!\[(?<alt_text>.*)\]\((?<image_path>.+)\)\n\n(?<body>.+)\z/m
+
+      # /\A# (?<title>.+)\n\n!\[(?<alt_text>.*)\]\((?<image_path>.+)\)\n\n(?<body>.+)\z/
+
+      def self.ingest(path)
+        new(path).ingest
+      end
+
+      attr_reader :path
 
       def initialize(path)
+        @path = path
         @raw = File.read(path)
       end
 
       def ingest
-        matches = @raw.match(PATTERN)
-        raise FormatError if matches.nil?
+        matches = @raw.match(BLOG_POST_FORMAT)
+        raise FormatError.new(path) if matches.nil?
 
         BlogPost.create(
           title: matches[:title],
