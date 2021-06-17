@@ -1,14 +1,40 @@
-@use "common/borders"
-
 #blog-container
   width: 100%
-  margin-top: 52px
+  margin: 52px 0 0 0
 
 .post-content-container
   padding: 40px 28px
+
+.blog-post-header-container
+  display: flex
+  flex-direction: column
+  align-items: left
+  margin-bottom: 20px
 
 .timestamp
   margin-bottom: 20px
 
 .hero-image
-  margin-bottom: 20px
+  max-height: 100%
+
+@media (min-width: $tablet-portrait)
+  .post-content-container
+    padding: 72px 40px
+
+  .blog-post-header-container
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 40px
+
+  .title-container > h2
+    margin-bottom: 40px
+
+  .timestamp
+    margin-bottom: 0
+
+  .hero-image
+    margin-bottom: 0
+
+@media (min-width: $desktop)
+  .post-content-container
+    padding: 72px 136px

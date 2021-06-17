@@ -1,6 +1,9 @@
 .double-border-outer
   .double-border-inner.post-content-container
-    %h2= blog_post.title
-    %p.timestamp= blog_post.created_at
-    %img.hero-image{src: blog_post.hero_image_path, alt: blog_post.hero_image_alt_text}
+    .blog-post-header-container
+      .title-container
+        %h2= blog_post.title
+        %p.timestamp= blog_post.created_at
+      .hero-image-container
+        %img.hero-image{src: blog_post.hero_image_path, alt: blog_post.hero_image_alt_text}
     = blog_post.html.html_safe

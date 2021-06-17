@@ -1,8 +1,9 @@
 = render "common/navbar"
 
 #page-container
-  %h1 Dev Blog
-  %p Consciousness, now streaming.
+  .header-container
+    %h1 Dev Blog
+    %p Consciousness, now streaming.
 
   #blog-container
     - blog_posts.each do |post|
