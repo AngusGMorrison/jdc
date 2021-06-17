@@ -27,8 +27,6 @@ module Services
 
       BLOG_POST_FORMAT = /\A# (?<title>.+)\n\n!\[(?<alt_text>.*)\]\((?<image_path>.+)\)\n\n(?<body>.+)\z/m
 
-      # /\A# (?<title>.+)\n\n!\[(?<alt_text>.*)\]\((?<image_path>.+)\)\n\n(?<body>.+)\z/
-
       def self.ingest(path)
         new(path).ingest
       end
