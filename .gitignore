@@ -28,7 +28,6 @@
 # Ignore keys for decrypting credentials and more.
 /config/master.key
 /config/credentials/development.key
-/config/credentials/production.key
 /config/credentials/test.key
 /.env
 
@@ -40,6 +39,4 @@
 yarn-debug.log*
 .yarn-integrity
 
-# rbenv
-/.ruby-version
-
+/config/credentials/production.key
