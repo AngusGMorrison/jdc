@@ -12,6 +12,5 @@
 
 # Ignore secret keys.
 /config/master.key
-/config/credentials/development.key
-/config/credentials/test.key
+/config/credentials/*.key
 /.env
