@@ -56,4 +56,6 @@ RUN yarn install --check-files
 # Copy remaining application code.
 COPY . ./
 
+EXPOSE 3000
+
 ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
