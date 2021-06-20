@@ -7,7 +7,6 @@ import Rails from '@rails/ujs'
 import Turbolinks from 'turbolinks'
 import * as ActiveStorage from '@rails/activestorage'
 import 'channels'
-import 'components/blog_post/blog_post.sass'
 
 Rails.start()
 Turbolinks.start()
