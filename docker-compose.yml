@@ -6,7 +6,6 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - database
-      - redis
     ports:
       - 3000:3000
     stdin_open: true
@@ -33,27 +32,6 @@ services:
       # will run any scripts found in docker-entrypoint-initdb.d.
       - ./db/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
     env_file: .env
-
-  redis:
-    image: redis:6.2.3
-
-  sidekiq:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      - app
-      - database
-      - redis
-    volumes:
-      - .:/app
-      - gem_cache:/usr/local/bundle/gems
-      - node_modules:/app/node_modules
-    env_file: .env
-    environment:
-      RAILS_ENV: development
-    # Override the default entrypoint in the Dockerfile.
-    entrypoint: ./entrypoints/sidekiq-entrypoint.sh
 
 # When Docker creates volumes, the contents of the volume are stored in a part
 # of the host filesystem that's managed by Docker: /var/lib/docker/volumes.
