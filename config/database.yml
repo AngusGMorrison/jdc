@@ -7,7 +7,7 @@ default: &default
   database: <%= Rails.application.credentials.database[:name] %>
   username: <%= Rails.application.credentials.database[:user] %>
   password: <%= Rails.application.credentials.database[:password] %>
-  port: <%= Rails.application.credentials.database[:port] || "5432" %>
+  port: <%= Rails.application.credentials.database[:port] %>
   host: <%= Rails.application.credentials.database[:host] %>
   timeout: 5000
 
@@ -20,3 +20,4 @@ test:
 
 production:
   <<: *default
+  url: <%= Rails.application.credentials.database[:url] %>
