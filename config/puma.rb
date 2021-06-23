@@ -17,7 +17,7 @@ port ENV.fetch("PORT", 3000)
 
 # Specifies the URI to bind to.
 if ENV.fetch("RAILS_ENV", "development") == "production"
-  bind "unix:///var/run/jdc.sock"
+  bind "unix:///tmp/jdc/jdc.sock"
 else
   bind "tcp://0.0.0.0"
 end
