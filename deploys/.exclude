@@ -7,3 +7,8 @@ node_modules
 .ruby-version
 dev.env
 nginx.development.conf
+tmp/cache/*
+tmp/miniprofiler/*
+tmp/pids/*
+tmp/sockets/*
+tmp/storage/*
