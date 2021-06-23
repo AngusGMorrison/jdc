@@ -1,0 +1,9 @@
+spec
+log/development.log
+node_modules
+.byebug_history
+.eslintrc.yml
+.rspec
+.ruby-version
+dev.env
+nginx.development.conf
