@@ -19,24 +19,27 @@
 !/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
+storage/*
+!storage/.keep
 
-/public/assets
+public/assets
 .byebug_history
 
 # Ignore keys for decrypting credentials and more.
-/config/master.key
-/config/credentials/development.key
-/config/credentials/test.key
-/.env
+.env
+config/master.key
+config/credentials/development.key
+config/credentials/production.key
+config/credentials/test.key
 
 # yarn
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
+public/packs
+public/packs-test
+node_modules
+yarn-error.log
 yarn-debug.log*
 .yarn-integrity
 
-/config/credentials/production.key
+# Ignore deployment zips.
+deploys/*
+!deploys/.exclude
