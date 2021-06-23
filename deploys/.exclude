@@ -1,0 +1,14 @@
+spec
+log/development.log
+node_modules
+.byebug_history
+.eslintrc.yml
+.rspec
+.ruby-version
+dev.env
+nginx.development.conf
+tmp/cache/*
+tmp/miniprofiler/*
+tmp/pids/*
+tmp/sockets/*
+tmp/storage/*
