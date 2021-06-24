@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap");
+/* line 3, app/assets/stylesheets/common/borders.sass */
+.double-border-outer {
+  padding: 4px;
+  border: 1px solid black;
+}
+
+/* line 7, app/assets/stylesheets/common/borders.sass */
+.double-border-inner {
+  border: 1px solid black;
+}
+
+/* line 1, app/assets/stylesheets/common/containers.sass */
+#page-container {
+  padding: 0 20px 0 20px;
+}
+
+@media (min-width: 600px) {
+  /* line 5, app/assets/stylesheets/common/containers.sass */
+  #page-container {
+    max-width: 728px;
+    margin: auto;
+  }
+  /* line 9, app/assets/stylesheets/common/containers.sass */
+  .header-container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 13, app/assets/stylesheets/common/containers.sass */
+  #page-container {
+    max-width: 780px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 18, app/assets/stylesheets/common/containers.sass */
+  #page-container {
+    max-width: 1088px;
+  }
+  /* line 21, app/assets/stylesheets/common/containers.sass */
+  .header-container {
+    padding: 0 136px;
+  }
+}
+
+/* line 1, app/assets/stylesheets/common/navbar.sass */
+#navbar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 40px;
+  border-bottom: 1px black solid;
+}
+
+/* line 9, app/assets/stylesheets/common/navbar.sass */
+#navbar > .logo {
+  margin-left: 20px;
+}
+
+/* line 1, app/assets/stylesheets/common/reset.sass */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 22, app/assets/stylesheets/common/reset.sass */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, app/assets/stylesheets/common/reset.sass */
+body {
+  line-height: 1;
+}
+
+/* line 29, app/assets/stylesheets/common/reset.sass */
+ol, ul {
+  list-style: none;
+}
+
+/* line 32, app/assets/stylesheets/common/reset.sass */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 35, app/assets/stylesheets/common/reset.sass */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, app/assets/stylesheets/common/reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "FA-Sysfont-C";
+  src: local("FA-Sysfont-C"), url(/assets/FA-Sysfont-C-1171d08b93b3f6b35b4f57b4bbfb65f3ff44c730ec9754f8aa476f56550a2d3f.woff2) format("woff2"), url(/assets/FA-Sysfont-C-07c86b5838672005ea44dcdf959e7fa91e1797c50a28744c76e511a43c25cde3.woff) format("woff");
+}
+
+/* line 10, app/assets/stylesheets/common/typography.sass */
+h1 {
+  font-family: "FA-Sysfont-C", "Courier New", monospace;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* line 15, app/assets/stylesheets/common/typography.sass */
+h1::after {
+  content: "▮";
+}
+
+/* line 18, app/assets/stylesheets/common/typography.sass */
+h2 {
+  font-family: "FA-Sysfont-C", "Courier New", monospace;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* line 23, app/assets/stylesheets/common/typography.sass */
+p {
+  font-family: "Merriweather", serif;
+  font-size: 12px;
+  margin-bottom: 12px;
+  line-height: 16px;
+}
+
+/* line 29, app/assets/stylesheets/common/typography.sass */
+strong {
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  /* line 33, app/assets/stylesheets/common/typography.sass */
+  h1 {
+    font-size: 42px;
+  }
+  /* line 36, app/assets/stylesheets/common/typography.sass */
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  /* line 40, app/assets/stylesheets/common/typography.sass */
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* line 1, app/assets/stylesheets/pages/blog.sass */
+#blog-container {
+  width: 100%;
+  margin: 52px 0 0 0;
+}
+
+/* line 5, app/assets/stylesheets/pages/blog.sass */
+.post-content-container {
+  padding: 40px 28px;
+}
+
+/* line 8, app/assets/stylesheets/pages/blog.sass */
+.blog-post-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+/* line 14, app/assets/stylesheets/pages/blog.sass */
+.timestamp {
+  margin-bottom: 20px;
+}
+
+/* line 17, app/assets/stylesheets/pages/blog.sass */
+.hero-image {
+  max-height: 100%;
+}
+
+@media (min-width: 600px) {
+  /* line 21, app/assets/stylesheets/pages/blog.sass */
+  .post-content-container {
+    padding: 72px 40px;
+  }
+  /* line 24, app/assets/stylesheets/pages/blog.sass */
+  .blog-post-header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  /* line 29, app/assets/stylesheets/pages/blog.sass */
+  .title-container > h2 {
+    margin-bottom: 40px;
+  }
+  /* line 32, app/assets/stylesheets/pages/blog.sass */
+  .timestamp {
+    margin-bottom: 0;
+  }
+  /* line 35, app/assets/stylesheets/pages/blog.sass */
+  .hero-image {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 39, app/assets/stylesheets/pages/blog.sass */
+  .post-content-container {
+    padding: 72px 136px;
+  }
+}
