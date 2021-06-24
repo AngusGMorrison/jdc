@@ -22,7 +22,6 @@
 storage/*
 !storage/.keep
 
-public/assets
 .byebug_history
 
 # Ignore keys for decrypting credentials and more.
@@ -33,7 +32,6 @@ config/credentials/production.key
 config/credentials/test.key
 
 # yarn
-public/packs
 public/packs-test
 node_modules
 yarn-error.log
